@@ -1,3 +1,5 @@
+## Bubble Sort
+
 - Thuật toán sắp xếp đơn giản nhất bằng cách hoán đổi nhiều lần các phần tử liền kề nếu chúng sai thứ tự.
 
 - Các phần tử sẽ được duyệt từ đầu dãy tới cuối dãy (k1 -> kn). Nếu 2 phần tử liền kề bị ngược thứ tự thì đổi chỗ chúng cho nhau. Sau lần duyệt như vậy, phần tử (nhỏ nhất/lớn nhất) trong dãy sẽ chuyển đến vị trí cuối cùng và vấn đề trở thành sắp xếp dãy từ k1 -> k(n-1).
