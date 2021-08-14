@@ -6,10 +6,10 @@ let insertionSort = (arr, n = arr.length) => {
     let key = arr[i]; // Lấy phần tử đầu tiên của mảng chưa đc sort lưu thành key để chèn
     let j = i - 1; //phần tử cuối cùng của mảng đã sắp xếp.
     // sort in the ascending order
+    // So sánh giá trị key cần chèn với phần tử cuối cùng của mảng
     while (j >= 0 && arr[j] > key) {
-      // So sánh giá trị key cần chèn với phần tử cuối cùng của mảng
       arr[j + 1] = arr[j]; // Đẩy lùi phần tử j về phía sau một vị trí, tạo ra khoảng trống tại vị trí j để chèn
-      j = j - 1; // Thỏa mãn j để break
+      j = j - 1; // Giảm j một đơn vị để tiếp tục so sánh key với các phần tử trong mảng đã đc sort
     }
 
     arr[j + 1] = key; // Đưa giá trị key cần chèn vào khoảng chống mới tạo ra
