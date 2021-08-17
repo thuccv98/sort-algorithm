@@ -10,7 +10,7 @@ const partition = (arr, first, last) => {
   let pivot = arr[first];
   let i = first;
 
-  // Phân chia array thành 2 phần (2 mảng con) bằng pivot
+  // Phân chia array thành 2 phần (2 mảng con) dựa pivot
   for (let j = first; j <= last; j++) {
     if (arr[j] <= pivot) {
       swap(arr, i, j);
