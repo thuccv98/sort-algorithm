@@ -1,4 +1,3 @@
-// Hàm để swap
 const swap = (arr, left, right) => {
   const temp = arr[left];
   arr[left] = arr[right];
@@ -6,28 +5,25 @@ const swap = (arr, left, right) => {
 };
 
 const partition = (arr, first, last) => {
-  // Chọn phần tử đầu tiên làm pivot (trục hoặc gọi là chốt)
-  let pivot = arr[first];
+  // Chọn phần tử cuối cùng làm pivot
+  let pivot = arr[last];
   let i = first;
 
   // Phân chia array thành 2 phần (2 mảng con) bằng pivot
-  for (let j = first; j <= last; j++) {
+  for (let j = first; j < last; j++) {
     if (arr[j] <= pivot) {
       swap(arr, i, j);
       i++;
     }
-    // sau mỗi loop thì các phần tử nhở hơn pivot về 1 bên
   }
 
-  swap(arr, i - 1, first);
+  swap(arr, i, last);
 
-  // return the pivot index
-  return i - 1;
+  //Return the pivot index
+  return i;
 };
 
-// Hàm đệ qui sắp xếp
 const quickSort = (arr, first, last) => {
-  // base condition
   // Nếu mảng chỉ có 1 phần tử thì trả về luôn - coi như đã sort
   if (first >= last) {
     return;
@@ -43,6 +39,7 @@ const quickSort = (arr, first, last) => {
   quickSort(arr, pivot + 1, last);
 };
 
-let arr = [10, 7, 8, 9, 1, 5];
-quickSort(arr, 0, arr.lenngth - 1);
-console.log(arr);
+let arr = [10, 7, 8, 9, 1, 5, -8, -2, 51];
+console.log('Mảng trước khi sort:', arr);
+quickSort(arr, 0, arr.length - 1);
+console.log('Mảng sau khi sort:', arr);
